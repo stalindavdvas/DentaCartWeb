@@ -11,20 +11,47 @@ namespace DentaCartASP.Formularios
 {
     public partial class Empleados : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                // Si el usuario está autenticado, la página se cargará  // Recuperar el valor almacenado en sesión
+                string emailUsuario = (string)Session["EmailUsuario"];
+                string tipoUsuario = (string)Session["TipoUsuario"];
+                if (emailUsuario == null && tipoUsuario == null)
+                {
+                    Response.Redirect("IniciarSesion.aspx");
+                }
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarEmpleados();
-                habilitar(false);
-                btnActualizar.Enabled = false;
-                btnCancelar.Enabled = false;
-                btnGuardar.Enabled = false;
-                btnNuevo.Enabled = true;
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.Cache.SetNoStore();
+                Response.Cache.SetExpires(DateTime.MinValue);
+                // Recuperar el valor almacenado en sesión
+                string emailUsuario = (string)Session["EmailUsuario"];
+                string tipoUsuario = (string)Session["TipoUsuario"];
+                if (emailUsuario == null && tipoUsuario == null)
+                {
+                    Response.Redirect("IniciarSesion.aspx");
+                }
+                else
+                {
+                    CargarEmpleados();
+                    habilitar(false);
+                    btnActualizar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnNuevo.Enabled = true;
+                }
+
+
             }
 
         }
-
         private void CargarEmpleados()
         {
             try

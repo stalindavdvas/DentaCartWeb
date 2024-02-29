@@ -11,7 +11,16 @@ namespace DentaCartASP.Formularios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                // Recuperar el valor almacenado en sesión
+                string emailUsuario = (string)Session["EmailUsuario"];
+                string tipoUsuario = (string)Session["TipoUsuario"];
+                if (emailUsuario == null && tipoUsuario == null)
+                {
+                    Response.Redirect("IniciarSesion.aspx");
+                }
+            }
         }
     }
 }

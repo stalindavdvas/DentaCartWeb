@@ -215,7 +215,10 @@
 
         <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">
-                <img src="../img/DentaCart.png" width="30" height="30">DentaCart</a>
+                <img src="../img/DentaCart.png" width="30" height="30">
+                <img src="../img/dent.png"
+                    class="img-fluid" width="100" height="100" alt="logo"></a>
+            </a>
 
             <ul class="navbar-nav flex-row d-md-none">
                 <li class="nav-item text-nowrap">
@@ -290,7 +293,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link d-flex align-items-center gap-2" href="Empleados.aspx">
+                                    <asp:LinkButton ID="lnEmpleados" runat="server" CssClass="nav-link d-flex align-items-center gap-2" href="Empleados.aspx">
                                          <svg class="bi">
                                          <use xlink:href="#bi-person-badge" />
                                      </svg>Empleados
@@ -353,12 +356,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <svg class="bi">
-                                            <use xlink:href="#door-closed" />
-                                        </svg>
-                                        Salir
-                                    </a>
+                                    <asp:LinkButton ID="lnSalir" runat="server" CssClass="nav-link d-flex align-items-center gap-2" OnClick="lnSalir_Click">
+                                          <svg class="bi">
+                                          <use xlink:href="#bi-person-badge" />
+                                      </svg>Salir
+                                    </asp:LinkButton>
                                 </li>
                             </ul>
                         </div>
@@ -375,6 +377,21 @@
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
             <script src="../js/dashboard.js"></script>
+             <script>
+ // Asegúrate de que esta función se ejecute después de cargar la página
+ window.onload = function () {
+     // Verifica si el usuario está autenticado (puedes ajustar esto según tu lógica de autenticación)
+     var usuarioAutenticado = '<%= Session["TipoUsuario"] != null && Session["NombreUsuario"]!=null %>';
+
+     // Si el usuario está autenticado, utiliza JavaScript para deshabilitar el botón Atrás del navegador
+     if (usuarioAutenticado) {
+         history.pushState(null, null, location.href);
+         window.onpopstate = function () {
+             history.go(1);
+         };
+     }
+ };
+             </script>
     </form>
 </body>
 </html>

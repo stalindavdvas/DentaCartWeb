@@ -197,11 +197,15 @@ namespace ServicioDentaCart.Entidades
                     // Crear un objeto Usuario con los datos obtenidos
                     EmpleadoDB existe = new EmpleadoDB
                     {
-
+                        id= reader.GetInt32(0),
                         nombre = reader["nombreempleado"].ToString(),
                         tipo = reader["tipoempleado"].ToString(),
-                        pass = reader["passempleado"].ToString()
-                        // Agrega otras propiedades según tus necesidades
+                        pass = reader["passempleado"].ToString(),
+                        correo= reader["emailempleado"].ToString(),
+                        dir= reader["dirempleado"].ToString(),
+                        telefono = reader["telfempleado"].ToString(),
+                        dni= reader["dniempleado"].ToString()
+
                     };
 
                     return existe;
