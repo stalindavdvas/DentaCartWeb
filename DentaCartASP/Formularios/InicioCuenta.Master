@@ -213,13 +213,12 @@
             </symbol>
         </svg>
 
-        <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow z-2" data-bs-theme="dark">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">
                 <img src="../img/DentaCart.png" width="30" height="30">
                 <img src="../img/dent.png"
                     class="img-fluid" width="100" height="100" alt="logo"></a>
-            </a>
-
+         
             <ul class="navbar-nav flex-row d-md-none">
                 <li class="nav-item text-nowrap">
                     <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
@@ -244,7 +243,7 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary position-fixed">
+                <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary position-fixed z-3">
                     <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="sidebarMenuLabel">DentaCart</h5>
@@ -368,7 +367,7 @@
                 </div>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                     </div>
                 </main>

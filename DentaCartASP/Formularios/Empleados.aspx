@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row p-2 overflow-auto" >
             <div class="col">
                 <asp:GridView ID="gvEmpleados" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-responsive" OnRowCommand="gvEmpleados_RowCommand" DataKeyNames="id" OnRowDataBound="gvEmpleados_RowDataBound">
                     <Columns>

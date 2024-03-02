@@ -43,5 +43,10 @@ namespace DentaCartASP.Formularios
             }
             
         }
+
+        protected void txtPassUsu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,16 +27,13 @@
     </style>
     <link href="../Estilos/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-color:#FBFCFC ;">
     <form id="form1" runat="server">
-        <section class="vh-100">
-            <div class="container-fluid h-custom">
+ 
+            <div class="container-fluid h-custom vh-100 ">
                 <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-md-9 col-lg-6 col-xl-5">
-                        <img src="../img/DentaCart.png"
-                            class="img-fluid p-0" alt="Sample image">
-                        <img src="../img/dent.png"
-                            class="img-fluid" alt="logo">
+                    <div class="col-md-9 col-lg-6 col-xl-5" style="">
+                       <img src="../img/dentalogo.png" class="img-fluid object-fit-cover" style="" width="1080" height="720"/>
                     </div>
                     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                         <form>
@@ -50,7 +47,7 @@
                                     <i class="fab fa-twitter"></i>
                                 </button>
 
-                                <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <button type="button" class="btn btn-primary  btn-floating mx-1">
                                     <i class="fab fa-linkedin-in"></i>
                                 </button>
                             </div>
@@ -67,7 +64,7 @@
 
                             <!-- Password input -->
                             <div class="form-outline mb-3">
-                                <asp:TextBox ID="txtPassUsu" runat="server" CssClass="form-control form-control-lg"></asp:TextBox>
+                                <asp:TextBox ID="txtPassUsu" runat="server" CssClass="form-control form-control-lg" OnTextChanged="txtPassUsu_TextChanged" TextMode="Password"></asp:TextBox>
                                 <label class="form-label" for="form3Example4">Password</label>
                             </div>
 
@@ -82,13 +79,13 @@
                                 <a href="#!" class="text-body">Olvidaste el password?</a>
                             </div>
 
-                            <div class="text-center text-lg-start mt-4 pt-2">
-                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-primary btn-lg" Style="padding-left: 2.5rem; padding-right: 2.5rem;" OnClick="btnIngresar_Click" />
+                            <div class="text-center text-lg-start mt-4 pt-2 btn-lg">
+                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-primary btn-lg" Style="width:100%;" OnClick="btnIngresar_Click" />
 
                                 <p class="small fw-bold mt-2 pt-1 mb-0">
                                     No tienes una cuenta? 
-                                    <a href="#!" class="link-danger">Registrarse</a>
-                                    <a href="Default.aspx" class="link-danger">Regresar</a>
+                                    <a href="#!" class="link-danger">Registrarse</a><br/>
+                                    <a href="Default.aspx" class="btn btn-warning">Regresar</a>
                                 </p>
                             </div>
 
@@ -96,32 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-dark">
-                <!-- Copyright -->
-                <div class="text-white mb-3 mb-md-0">
-                    Copyright © 2024. Todos los derechos reservados.
-                </div>
-                <!-- Copyright -->
-
-                <!-- Right -->
-                <div>
-                    <a href="#!" class="text-white me-4">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#!" class="text-white me-4">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#!" class="text-white me-4">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="#!" class="text-white">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-            </div>
-        </section>
+     
     </form>
     <script src="../js/bootstrap.bundle.min.js"></script>
    <script type="text/javascript">

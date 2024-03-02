@@ -2,128 +2,180 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <main style="margin-top:4%; width:100%;">
-     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-         <img src="../img/insumo2.jpg" class="img-fluid" alt="insumos1" style="width:100%;">
-          <div class="container">
-          <div class="carousel-caption text-start text-dark">
-            <h1>Tienda de insumos odontológicos</h1>
-            <p class="opacity-75">Ofrecemos dispositivos de uso odontológico.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
-          </div>
+    <main style="margin-top: 4%; width: 100%;">
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/insumo2.jpg" class="img-fluid" alt="insumos1" style="width: 100%;">
+                    <div class="container">
+                        <div class="carousel-caption text-start text-dark">
+                            <h1>Tienda de insumos odontológicos</h1>
+                            <p class="opacity-75">Ofrecemos dispositivos de uso odontológico.</p>
+                            <p><a class="btn btn-lg btn-primary" href="Default.aspx#prod">Ver más</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/herramientas.jpg" class="img-fluid" alt="insumos2" style="width: 100%;">
+                    <div class="container">
+                        <div class="carousel-caption text-dark">
+                            <h1>Insumos para Clínicas y Estudiantes</h1>
+                            <p>Disponemos de Herramientas odontológicas tanto para Clínicas como para Estudiantes de la carrera de odontología..</p>
+                            <p><a class="btn btn-lg btn-primary" href="Default.aspx#her">Ver más</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/implantes.jpg" class="img-fluid" alt="insumos3" style="width: 100%;">
+                    <div class="container">
+                        <div class="carousel-caption text-end text-dark">
+                            <h1>Compras Seguras</h1>
+                            <p>Realiza tu compra de manera segura y con productos de calidad.</p>
+                            <p><a class="btn btn-lg btn-primary" href="Default.aspx#segu">Ver Productos</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../img/insumos1.jpg"  class="img-fluid" alt="insumos2" style="width:100%;">
-          <div class="container">
-          <div class="carousel-caption text-dark">
-            <h1>Insumos para Clinicas y Estudiantes</h1>
-            <p>Disponemos de Herramientas odontológicas tanto para Clinicas como para Estudiantes de la carrera de odontología..</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../img/insumo1.jpg"   class="img-fluid" alt="insumos3" style="width:100%;">
-          <div class="container">
-          <div class="carousel-caption text-end text-dark">
-            <h1>Compras Seguras</h1>
-            <p>Realiza tu compra de manera segura y con productos de calidad.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Ver Productos</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
 
-  <!-- Marketing messaging and featurettes
+        <!-- Marketing messaging and featurettes
   ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container marketing">
+        <div class="container marketing">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="../img/esterilizacion.jpg" width="140" height="140" class="object-fit-cover rounded-circle" alt="esterilizacion">
+                    <h2 class="fw-normal">Esterilización</h2>
+                    <p>Dispositivos para uso clínico en esterilización de materiales odontológicos</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="../img/ortodoncia.jpeg" width="140" height="140" class="object-fit-cover rounded-circle" alt="ortodoncia">
+                    <h2 class="fw-normal">Ortodoncia</h2>
+                    <p>Materiales para uso de Ortodoncia</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="../img/implantes.jpg" width="140" height="140" class="object-fit-cover rounded-circle" alt="implante">
+                    <h2 class="fw-normal">Implantes</h2>
+                    <p>Insumos de uso clínico para implantes dentales.</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="../img/silla.jpg" alt="silla" width="140" height="140" class="object-fit-cover rounded-circle">
+                    <h2 class="fw-normal">Equipos Seminuevos</h2>
+                    <p>Dispositivos para clinicas o estudiantes remanufacturados a menor costo</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="../img/aplicaciones.jpg" width="140" height="140" class="object-fit-cover rounded-circle" alt="software">
+                    <h2 class="fw-normal">Software Odotonlógico</h2>
+                    <p>Aplicaciones informaticas para uso odontológico</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="../img/herramientas.jpg" width="140" height="140" class="object-fit-cover rounded-circle" alt="tools">
+                    <h2 class="fw-normal">Herramientas</h2>
+                    <p>Herramientas para clínicas o profesionales de la salud bucal.</p>
+                    <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
 
+            <!-- START THE FEATURETTES -->
 
-    <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
+            <div class="row featurette" id="prod">
+                <div class="col-md-7 text-center">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                    Herramientas de Esterilización 
+        <p class="lead">
+            Disponemos de las mejores marcas de equipos de esterilización
+            <br />
+            de instrumentos para uso dental que te garantiza la salubridad de tus herramientas de trabajo.
+        </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="../img/esterilizacion.jpg" class="img-fluid mx-auto" width="500" height="500" alt="ester" />
+                </div>
+            </div>
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-      </div>
-    </div>
+            <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
+            <div class="row featurette" id="segu">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Seguridad en tus Compras. <span class="text-body-secondary">Con garantía de fábrica.</span></h2>
+                    <p class="lead">Puedes adquirir tus productos con seguridad y respaldo de funcionamiento debido a que importamos equipos en las mejores marcas del mercado para la conformidad de todos nuestros clientes.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="../img/carrito.jpeg" />
+                </div>
+            </div>
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-      </div>
-    </div>
+            <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
+            <div class="row featurette" id="her">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Equipos Seminuevos/<span class="text-body-secondary">Refacturados</span></h2>
+                    <p class="lead">Ofrecemos también un catálogo de productos que han sido remanufacturados como sillas, compresores que se encuentran funcionando de manera correcta y con garantía de 6 meses para que sientas seguridad en la adquisición de estos.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="../img/remanu.jpeg" />
+                </div>
+            </div>
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-      </div>
-    </div>
+            <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
+            <div class="row featurette text-center">
+                <div class="col-md-12 text-center">
+                    <h3>Contactos</h3>
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded-circle img-fluid mx-auto"  src="../img/ubic.png" /><br/>
+                    Quito, Ecuador
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded-circle img-fluid mx-auto"  height="500" src="../img/wsp.png" /><br/>
+                    0999999999
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded-circle img-fluid mx-auto"  height="500" src="../img/email.png" /><br/>
+                    Correo: dentacart_servicios@gmail.com
+                </div>
+            </div>
 
-    <!-- /END THE FEATURETTES -->
+            <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+        </div>
+        <!-- /.container -->
     </main>
 
 </asp:Content>

@@ -12,7 +12,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   width:100%;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -23,7 +23,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 36rem;
 }
 
 
