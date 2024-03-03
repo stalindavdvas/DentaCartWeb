@@ -16,7 +16,7 @@
                         <div class="carousel-caption text-start text-dark">
                             <h1>Tienda de insumos odontológicos</h1>
                             <p class="opacity-75">Ofrecemos dispositivos de uso odontológico.</p>
-                            <p><a class="btn btn-lg btn-primary" href="Default.aspx#prod">Ver más</a></p>
+                            <p><a class="btn btn-lg btn-success" href="Default.aspx#prod">Ver más</a></p>
                         </div>
                     </div>
                 </div>

@@ -41,6 +41,14 @@ namespace ServicioDentaCart
         }
 
         [WebMethod]
+        public ClienteDB ObtenerClientePorId(int clienteID)
+        {
+            Cliente cliente = new Cliente();
+            return cliente.ObtenerClientePorID(clienteID);
+        }
+
+
+        [WebMethod]
         public void InsertarCliente(string nombrecliente, string dnicliente, string dircliente, string emailcliente, string telfcliente)
         {
             Cliente cliente = new Cliente();
@@ -115,6 +123,13 @@ namespace ServicioDentaCart
         }
 
         [WebMethod]
+        public ProveedorDB ObtenerProveedorPorId(int proveedorID)
+        {
+            Proveedor proveedor = new Proveedor();
+            return proveedor.ObtenerProveedorPorId(proveedorID);
+        }
+
+        [WebMethod]
         public void InsertarProveedor(string nombreproveedor, string dniproveedor, string dirproveedor, string emailproveedor, string telfproveedor)
         {
             Proveedor proveedor = new Proveedor();
@@ -140,6 +155,13 @@ namespace ServicioDentaCart
         {
             Producto producto = new Producto();
             return producto.ListarProductoSP(parametroBusqueda);
+        }
+
+        [WebMethod]
+        public ProductoDB ObtenerProductoPorId(int productoID)
+        {
+            Producto producto = new Producto();
+            return producto.ObtenerProductoPorId(productoID);
         }
 
         [WebMethod]

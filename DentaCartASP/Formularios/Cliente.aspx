@@ -27,13 +27,15 @@
         </div>
         <div class="col">
             <div class="card text-bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Empleados</div>
+                <div class="card-header">Productos</div>
                 <div class="card-body">
                     <h5 class="card-title">Total Ingresados</h5>
-                    <p class="card-text">5</p>
+                    <p class="card-text">50</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row align-items-center">
         <div class="col">
             <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
                 <div class="card-header">Ventas</div>
@@ -43,5 +45,36 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+       <script>
+       const ctx = document.getElementById('myChart');
+
+       new Chart(ctx, {
+           type: 'bar',
+           data: {
+               labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+               datasets: [{
+                   label: '# of Votes',
+                   data: [12, 19, 3, 5, 2, 3],
+                   borderWidth: 1
+               }]
+           },
+           options: {
+               scales: {
+                   y: {
+                       beginAtZero: true
+                   }
+               }
+           }
+       });
+       </script>
 </asp:Content>

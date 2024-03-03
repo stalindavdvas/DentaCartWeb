@@ -41,6 +41,20 @@
           <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ObtenerClientePorId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clienteID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerClientePorIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerClientePorIdResult" type="tns:ClienteDB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarCliente">
         <s:complexType>
           <s:sequence>
@@ -212,6 +226,20 @@
           <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ObtenerProveedorPorId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="proveedorID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerProveedorPorIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerProveedorPorIdResult" type="tns:ProveedorDB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarProveedor">
         <s:complexType>
           <s:sequence>
@@ -280,6 +308,20 @@
           <s:element minOccurs="0" maxOccurs="1" name="nombreprov" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ObtenerProductoPorId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="productoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerProductoPorIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerProductoPorIdResult" type="tns:ProductoDB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarProducto">
         <s:complexType>
           <s:sequence>
@@ -330,6 +372,12 @@
   </wsdl:message>
   <wsdl:message name="ListarClienteSoapOut">
     <wsdl:part name="parameters" element="tns:ListarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerClientePorIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorId" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerClientePorIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorIdResponse" />
   </wsdl:message>
   <wsdl:message name="InsertarClienteSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarCliente" />
@@ -391,6 +439,12 @@
   <wsdl:message name="ListarProveedorSoapOut">
     <wsdl:part name="parameters" element="tns:ListarProveedorResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerProveedorPorIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorId" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProveedorPorIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorIdResponse" />
+  </wsdl:message>
   <wsdl:message name="InsertarProveedorSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarProveedor" />
   </wsdl:message>
@@ -414,6 +468,12 @@
   </wsdl:message>
   <wsdl:message name="ListarProductoSoapOut">
     <wsdl:part name="parameters" element="tns:ListarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProductoPorIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerProductoPorId" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProductoPorIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerProductoPorIdResponse" />
   </wsdl:message>
   <wsdl:message name="InsertarProductoSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarProducto" />
@@ -441,6 +501,10 @@
     <wsdl:operation name="ListarCliente">
       <wsdl:input message="tns:ListarClienteSoapIn" />
       <wsdl:output message="tns:ListarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorId">
+      <wsdl:input message="tns:ObtenerClientePorIdSoapIn" />
+      <wsdl:output message="tns:ObtenerClientePorIdSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarCliente">
       <wsdl:input message="tns:InsertarClienteSoapIn" />
@@ -482,6 +546,10 @@
       <wsdl:input message="tns:ListarProveedorSoapIn" />
       <wsdl:output message="tns:ListarProveedorSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorId">
+      <wsdl:input message="tns:ObtenerProveedorPorIdSoapIn" />
+      <wsdl:output message="tns:ObtenerProveedorPorIdSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="InsertarProveedor">
       <wsdl:input message="tns:InsertarProveedorSoapIn" />
       <wsdl:output message="tns:InsertarProveedorSoapOut" />
@@ -497,6 +565,10 @@
     <wsdl:operation name="ListarProducto">
       <wsdl:input message="tns:ListarProductoSoapIn" />
       <wsdl:output message="tns:ListarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductoPorId">
+      <wsdl:input message="tns:ObtenerProductoPorIdSoapIn" />
+      <wsdl:output message="tns:ObtenerProductoPorIdSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarProducto">
       <wsdl:input message="tns:InsertarProductoSoapIn" />
@@ -524,6 +596,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarCliente">
       <soap:operation soapAction="http://tempuri.org/ListarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorId">
+      <soap:operation soapAction="http://tempuri.org/ObtenerClientePorId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -621,6 +702,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorId">
+      <soap:operation soapAction="http://tempuri.org/ObtenerProveedorPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertarProveedor">
       <soap:operation soapAction="http://tempuri.org/InsertarProveedor" style="document" />
       <wsdl:input>
@@ -650,6 +740,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarProducto">
       <soap:operation soapAction="http://tempuri.org/ListarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductoPorId">
+      <soap:operation soapAction="http://tempuri.org/ObtenerProductoPorId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -698,6 +797,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarCliente">
       <soap12:operation soapAction="http://tempuri.org/ListarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorId">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerClientePorId" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -795,6 +903,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorId">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerProveedorPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertarProveedor">
       <soap12:operation soapAction="http://tempuri.org/InsertarProveedor" style="document" />
       <wsdl:input>
@@ -824,6 +941,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarProducto">
       <soap12:operation soapAction="http://tempuri.org/ListarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductoPorId">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerProductoPorId" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

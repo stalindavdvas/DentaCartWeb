@@ -66,6 +66,43 @@ namespace ServicioDentaCart.Entidades
             }
             return personas;
         }
+
+        //Metodo para traer Cliente por ID
+        public ClienteDB ObtenerClientePorID(int clienteID)
+        {
+            ClienteDB cliente = null;
+            using (Conexion)
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = "obtenerClientePorID";  // Nombre de tu procedimiento almacenado
+                comando.Connection = Conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+
+                // Añade el parámetro para el ID del cliente
+                comando.Parameters.AddWithValue("@ClienteID", clienteID);
+
+                Conexion.Open();
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    cliente = new ClienteDB
+                    {
+                        id = reader.GetInt32(0),
+                        nombre = reader.GetString(1),
+                        dni = reader.GetString(2),
+                        dir = reader.GetString(3),
+                        correo = reader.GetString(4),
+                        telefono = reader.GetString(5)
+                    };
+                }
+                reader.Close();
+                Conexion.Close();
+            }
+            return cliente;
+        }
+
+
+
         //Metodo para insertar Clientes
         public void guardarCliente(string nombrecliente, string dnicliente, string dircliente, string emailcliente, string telfcliente)
         {

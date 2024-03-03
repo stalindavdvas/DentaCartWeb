@@ -70,6 +70,8 @@ namespace DentaCartASP.Formularios
             {
                 // Manejar el error (puedes mostrar un mensaje de error en la página)
                 Console.WriteLine($"Error al obtener la lista de empleados: {ex.Message}");
+                // Inicio de sesión no exitoso, mostrar alerta
+                ltlAlertaEmpleados.Text = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>No se puede cargar los datos.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
             }
         }
         protected void gvEmpleados_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -175,15 +177,15 @@ namespace DentaCartASP.Formularios
 
                     }
                     string script = "<script type=\"text/javascript\">mostrarModalBorrar('" +
-     empleadoSeleccionado.id.ToString() +
-     "','" + empleadoSeleccionado.nombre +
-     "','" + empleadoSeleccionado.dni +
-     "','" + empleadoSeleccionado.dir +
-     "','" + empleadoSeleccionado.correo +
-     "','" + empleadoSeleccionado.telefono +
-     "','" + empleadoSeleccionado.tipo +
-     "','" + empleadoSeleccionado.pass +
-     "');</script>";
+                                     empleadoSeleccionado.id.ToString() +
+                                     "','" + empleadoSeleccionado.nombre +
+                                     "','" + empleadoSeleccionado.dni +
+                                     "','" + empleadoSeleccionado.dir +
+                                     "','" + empleadoSeleccionado.correo +
+                                     "','" + empleadoSeleccionado.telefono +
+                                     "','" + empleadoSeleccionado.tipo +
+                                     "','" + empleadoSeleccionado.pass +
+                                     "');</script>";
                     ClientScript.RegisterStartupScript(this.GetType(), "MostrarModalBorrar", script);
                 }
                 catch (Exception ex)
@@ -299,8 +301,11 @@ namespace DentaCartASP.Formularios
                 ServicioDentaCart.WebServiceDentaCartSoapClient clienteServicioWeb = new ServicioDentaCart.WebServiceDentaCartSoapClient();
                 clienteServicioWeb.GuardarEmpleado(txtNombre.Text, txtDni.Text, txtDir.Text, txtCorreo.Text,
                     txtTelefono.Text, cmbTipo.SelectedValue, txtPass.Text);
-                string script = "<script type=\"text/javascript\">mostrarAlerta();</script>";
-                ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlerta", script);
+                //string script = "<script type=\"text/javascript\">mostrarAlerta();</script>";
+                //ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlerta", script);
+
+                // Inicio de sesión no exitoso, mostrar alerta
+                ltlAlertaEmpleados.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>Datos Guardados correctamente.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
                 CargarEmpleados();
                 habilitar(false);
                 limpiar();
@@ -311,8 +316,10 @@ namespace DentaCartASP.Formularios
 
             }
             else {
-                string script = "<script type=\"text/javascript\">mostrarAlertaError();</script>";
-                ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaError", script);
+                //string script = "<script type=\"text/javascript\">mostrarAlertaError();</script>";
+                //ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaError", script);
+                ltlAlertaEmpleados.Text = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>Error no se puede guardar los datos <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+
             }
         }
 
@@ -321,8 +328,10 @@ namespace DentaCartASP.Formularios
             ServicioDentaCart.WebServiceDentaCartSoapClient clienteServicioWeb = new ServicioDentaCart.WebServiceDentaCartSoapClient();
             clienteServicioWeb.EditarEmpleado(Int32.Parse(txtId.Text), txtNombre.Text, txtDni.Text, txtDir.Text, txtCorreo.Text,
                 txtTelefono.Text, cmbTipo.SelectedValue, txtPass.Text);
-            string script = "<script type=\"text/javascript\">mostrarAlertaEditar();</script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaEditar", script);
+            // string script = "<script type=\"text/javascript\">mostrarAlertaEditar();</script>";
+            //ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaEditar", script);
+            ltlAlertaEmpleados.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>Datos Actualizados correctamente.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+
             CargarEmpleados();
             habilitar(false);
             limpiar();
@@ -336,8 +345,9 @@ namespace DentaCartASP.Formularios
         {
             ServicioDentaCart.WebServiceDentaCartSoapClient clienteServicioWeb = new ServicioDentaCart.WebServiceDentaCartSoapClient();
             clienteServicioWeb.BorrarEmpleado(Int32.Parse(txtIdM.Text));
-            string script = "<script type=\"text/javascript\">mostrarAlertaBorrado();</script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaBorrado", script);
+            // string script = "<script type=\"text/javascript\">mostrarAlertaBorrado();</script>";
+            // ClientScript.RegisterStartupScript(this.GetType(), "MostrarAlertaBorrado", script);
+            ltlAlertaEmpleados.Text = "<div class='alert alert-success alert-dismissible fade show' role='alert'>Datos Eliminados correctamente.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
             CargarEmpleados();
         }
     }

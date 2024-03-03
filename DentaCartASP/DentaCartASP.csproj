@@ -163,6 +163,15 @@
     <Content Include="Connected Services\ServicioDentaCart\DentaCartASP.ServicioDentaCart.ObtenerEmpleadoPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioDentaCart\DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioDentaCart\DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioDentaCart\DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioDentaCart\WebServiceDentaCart.disco" />
     <None Include="Connected Services\ServicioDentaCart\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioDentaCart\configuration.svcinfo" />

@@ -556,6 +556,13 @@ namespace DentaCartASP.ServicioDentaCart {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarCliente", ReplyAction="*")]
         System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ListarClienteResponse> ListarClienteAsync(DentaCartASP.ServicioDentaCart.ListarClienteRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerClientePorIdResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerClientePorId", ReplyAction="*")]
+        DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse ObtenerClientePorId(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerClientePorId", ReplyAction="*")]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse> ObtenerClientePorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombrecliente del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarCliente", ReplyAction="*")]
         DentaCartASP.ServicioDentaCart.InsertarClienteResponse InsertarCliente(DentaCartASP.ServicioDentaCart.InsertarClienteRequest request);
@@ -624,6 +631,13 @@ namespace DentaCartASP.ServicioDentaCart {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarProveedor", ReplyAction="*")]
         System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ListarProveedorResponse> ListarProveedorAsync(DentaCartASP.ServicioDentaCart.ListarProveedorRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerProveedorPorIdResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerProveedorPorId", ReplyAction="*")]
+        DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse ObtenerProveedorPorId(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerProveedorPorId", ReplyAction="*")]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse> ObtenerProveedorPorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombreproveedor del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarProveedor", ReplyAction="*")]
         DentaCartASP.ServicioDentaCart.InsertarProveedorResponse InsertarProveedor(DentaCartASP.ServicioDentaCart.InsertarProveedorRequest request);
@@ -650,6 +664,13 @@ namespace DentaCartASP.ServicioDentaCart {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarProducto", ReplyAction="*")]
         System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ListarProductoResponse> ListarProductoAsync(DentaCartASP.ServicioDentaCart.ListarProductoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerProductoPorIdResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerProductoPorId", ReplyAction="*")]
+        DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse ObtenerProductoPorId(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerProductoPorId", ReplyAction="*")]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse> ObtenerProductoPorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombreproducto del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarProducto", ReplyAction="*")]
@@ -798,6 +819,74 @@ namespace DentaCartASP.ServicioDentaCart {
         
         public ListarClienteResponseBody(DentaCartASP.ServicioDentaCart.ClienteDB[] ListarClienteResult) {
             this.ListarClienteResult = ListarClienteResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerClientePorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerClientePorId", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequestBody Body;
+        
+        public ObtenerClientePorIdRequest() {
+        }
+        
+        public ObtenerClientePorIdRequest(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerClientePorIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int clienteID;
+        
+        public ObtenerClientePorIdRequestBody() {
+        }
+        
+        public ObtenerClientePorIdRequestBody(int clienteID) {
+            this.clienteID = clienteID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerClientePorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerClientePorIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponseBody Body;
+        
+        public ObtenerClientePorIdResponse() {
+        }
+        
+        public ObtenerClientePorIdResponse(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerClientePorIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public DentaCartASP.ServicioDentaCart.ClienteDB ObtenerClientePorIdResult;
+        
+        public ObtenerClientePorIdResponseBody() {
+        }
+        
+        public ObtenerClientePorIdResponseBody(DentaCartASP.ServicioDentaCart.ClienteDB ObtenerClientePorIdResult) {
+            this.ObtenerClientePorIdResult = ObtenerClientePorIdResult;
         }
     }
     
@@ -1413,6 +1502,74 @@ namespace DentaCartASP.ServicioDentaCart {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerProveedorPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerProveedorPorId", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequestBody Body;
+        
+        public ObtenerProveedorPorIdRequest() {
+        }
+        
+        public ObtenerProveedorPorIdRequest(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerProveedorPorIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int proveedorID;
+        
+        public ObtenerProveedorPorIdRequestBody() {
+        }
+        
+        public ObtenerProveedorPorIdRequestBody(int proveedorID) {
+            this.proveedorID = proveedorID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerProveedorPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerProveedorPorIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponseBody Body;
+        
+        public ObtenerProveedorPorIdResponse() {
+        }
+        
+        public ObtenerProveedorPorIdResponse(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerProveedorPorIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public DentaCartASP.ServicioDentaCart.ProveedorDB ObtenerProveedorPorIdResult;
+        
+        public ObtenerProveedorPorIdResponseBody() {
+        }
+        
+        public ObtenerProveedorPorIdResponseBody(DentaCartASP.ServicioDentaCart.ProveedorDB ObtenerProveedorPorIdResult) {
+            this.ObtenerProveedorPorIdResult = ObtenerProveedorPorIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class InsertarProveedorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarProveedor", Namespace="http://tempuri.org/", Order=0)]
@@ -1639,6 +1796,74 @@ namespace DentaCartASP.ServicioDentaCart {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerProductoPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerProductoPorId", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequestBody Body;
+        
+        public ObtenerProductoPorIdRequest() {
+        }
+        
+        public ObtenerProductoPorIdRequest(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerProductoPorIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int productoID;
+        
+        public ObtenerProductoPorIdRequestBody() {
+        }
+        
+        public ObtenerProductoPorIdRequestBody(int productoID) {
+            this.productoID = productoID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerProductoPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerProductoPorIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponseBody Body;
+        
+        public ObtenerProductoPorIdResponse() {
+        }
+        
+        public ObtenerProductoPorIdResponse(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerProductoPorIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public DentaCartASP.ServicioDentaCart.ProductoDB ObtenerProductoPorIdResult;
+        
+        public ObtenerProductoPorIdResponseBody() {
+        }
+        
+        public ObtenerProductoPorIdResponseBody(DentaCartASP.ServicioDentaCart.ProductoDB ObtenerProductoPorIdResult) {
+            this.ObtenerProductoPorIdResult = ObtenerProductoPorIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class InsertarProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarProducto", Namespace="http://tempuri.org/", Order=0)]
@@ -1858,6 +2083,31 @@ namespace DentaCartASP.ServicioDentaCart {
             inValue.Body = new DentaCartASP.ServicioDentaCart.ListarClienteRequestBody();
             inValue.Body.filtro = filtro;
             return ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ListarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerClientePorId(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest request) {
+            return base.Channel.ObtenerClientePorId(request);
+        }
+        
+        public DentaCartASP.ServicioDentaCart.ClienteDB ObtenerClientePorId(int clienteID) {
+            DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequestBody();
+            inValue.Body.clienteID = clienteID;
+            DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse retVal = ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerClientePorId(inValue);
+            return retVal.Body.ObtenerClientePorIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse> DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerClientePorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest request) {
+            return base.Channel.ObtenerClientePorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerClientePorIdResponse> ObtenerClientePorIdAsync(int clienteID) {
+            DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerClientePorIdRequestBody();
+            inValue.Body.clienteID = clienteID;
+            return ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerClientePorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2119,6 +2369,31 @@ namespace DentaCartASP.ServicioDentaCart {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerProveedorPorId(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest request) {
+            return base.Channel.ObtenerProveedorPorId(request);
+        }
+        
+        public DentaCartASP.ServicioDentaCart.ProveedorDB ObtenerProveedorPorId(int proveedorID) {
+            DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequestBody();
+            inValue.Body.proveedorID = proveedorID;
+            DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse retVal = ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerProveedorPorId(inValue);
+            return retVal.Body.ObtenerProveedorPorIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse> DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerProveedorPorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest request) {
+            return base.Channel.ObtenerProveedorPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdResponse> ObtenerProveedorPorIdAsync(int proveedorID) {
+            DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerProveedorPorIdRequestBody();
+            inValue.Body.proveedorID = proveedorID;
+            return ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerProveedorPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         DentaCartASP.ServicioDentaCart.InsertarProveedorResponse DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.InsertarProveedor(DentaCartASP.ServicioDentaCart.InsertarProveedorRequest request) {
             return base.Channel.InsertarProveedor(request);
         }
@@ -2215,6 +2490,31 @@ namespace DentaCartASP.ServicioDentaCart {
             inValue.Body = new DentaCartASP.ServicioDentaCart.ListarProductoRequestBody();
             inValue.Body.parametroBusqueda = parametroBusqueda;
             return ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ListarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerProductoPorId(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest request) {
+            return base.Channel.ObtenerProductoPorId(request);
+        }
+        
+        public DentaCartASP.ServicioDentaCart.ProductoDB ObtenerProductoPorId(int productoID) {
+            DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequestBody();
+            inValue.Body.productoID = productoID;
+            DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse retVal = ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerProductoPorId(inValue);
+            return retVal.Body.ObtenerProductoPorIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse> DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap.ObtenerProductoPorIdAsync(DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest request) {
+            return base.Channel.ObtenerProductoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdResponse> ObtenerProductoPorIdAsync(int productoID) {
+            DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest inValue = new DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequest();
+            inValue.Body = new DentaCartASP.ServicioDentaCart.ObtenerProductoPorIdRequestBody();
+            inValue.Body.productoID = productoID;
+            return ((DentaCartASP.ServicioDentaCart.WebServiceDentaCartSoap)(this)).ObtenerProductoPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

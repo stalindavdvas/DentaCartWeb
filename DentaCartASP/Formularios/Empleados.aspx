@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h4>Formulario de Empleados</h4>
+                <h4>Formulario de Empleados</h4><div id="alertaEmpleado"> <asp:Literal ID="ltlAlertaEmpleados" runat="server"></asp:Literal></div>
                 <div class="row p-2">
                     <div class="col-md-12">
                         <label for="txtId" class="form-label">ID:</label>
@@ -21,11 +21,15 @@
                     </div>
                     <div class="col-md-6">
                         <label for="txtEmail" class="form-label">Email</label>
-                        <asp:TextBox ID="txtCorreo" CssClass="form-control" runat="server" required="true"></asp:TextBox>
+                        <asp:TextBox ID="txtCorreo" CssClass="form-control" runat="server" TextMode="Email" required="true"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="regexCorreo" runat="server" ControlToValidate="txtCorreo"
+                            ValidationExpression="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
+                            ErrorMessage="Ingrese un correo electrónico válido" Display="Dynamic" ForeColor="Red">
+                        </asp:RegularExpressionValidator>
                     </div>
                     <div class="col-md-6">
                         <label for="txtPass" class="form-label">Password:</label>
-                        <asp:TextBox ID="txtPass" CssClass="form-control" runat="server" required="true"></asp:TextBox>
+                        <asp:TextBox ID="txtPass" CssClass="form-control" runat="server" TextMode="Password" required="true"></asp:TextBox>
                     </div>
                     <div class="col-md-6">
                         <label for="inputTipo" class="form-label">Tipo Usuario:</label>
@@ -43,9 +47,9 @@
                         <label for="inputAddress" class="form-label">Direccion:</label>
                         <asp:TextBox ID="txtDir" CssClass="form-control" runat="server" required="true"></asp:TextBox>
                     </div>
-                    <br/>
+                    <br />
                     <div class="col-md-12">
-                        <div class="row" style="padding:10px;">
+                        <div class="row" style="padding: 10px;">
                             <div class="col border text-center">
                                 <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-primary" OnClick="btnNuevo_Click" UseSubmitBehavior="false" />
                             </div>
@@ -56,14 +60,14 @@
                                 <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" UseSubmitBehavior="false" />
                             </div>
                             <div class="col border text-center">
-                                <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-danger" OnClick="btnActualizar_Click" UseSubmitBehavior="false"/>
+                                <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-danger" OnClick="btnActualizar_Click" UseSubmitBehavior="false" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row p-2 overflow-auto" >
+        <div class="row p-2 overflow-auto">
             <div class="col">
                 <asp:GridView ID="gvEmpleados" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-responsive" OnRowCommand="gvEmpleados_RowCommand" DataKeyNames="id" OnRowDataBound="gvEmpleados_RowDataBound">
                     <Columns>
@@ -169,7 +173,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"/>
+                    <asp:Button ID="btnEliminar" CssClass="btn btn-danger" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" />
                 </div>
             </div>
         </div>
@@ -200,8 +204,8 @@
         }
 
 
-        function mostrarModalBorrar(id, nombre,dni,dir,correo,telf,tipo,pass) {
-           
+        function mostrarModalBorrar(id, nombre, dni, dir, correo, telf, tipo, pass) {
+
             // Asignar los valores a los TextBox del modal
             document.getElementById('<%= txtIdM.ClientID %>').value = id;
             document.getElementById('<%= txtNombreM.ClientID %>').value = nombre;

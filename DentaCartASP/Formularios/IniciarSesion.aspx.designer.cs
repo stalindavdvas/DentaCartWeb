@@ -24,6 +24,15 @@ namespace DentaCartASP.Formularios
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control ltlAlertaLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltlAlertaLogin;
+
+        /// <summary>
         /// Control txtEmailUsu.
         /// </summary>
         /// <remarks>

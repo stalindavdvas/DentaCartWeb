@@ -45,7 +45,7 @@ namespace ServicioDentaCart.Entidades
 
         public List<ProductoDB> ListarProductoSP(string condicion)
         {
-            List<ProductoDB> personas = new List<ProductoDB>();
+            List<ProductoDB> productos = new List<ProductoDB>();
             using (Conexion)
             {
                 SqlCommand comando = new SqlCommand();
@@ -65,13 +65,47 @@ namespace ServicioDentaCart.Entidades
                     oProd.precio = Convert.ToSingle(reader[3]);
                     oProd.idprov = reader.GetInt32(4);
                     oProd.nombreprov = reader.GetString(5);
-                    personas.Add(oProd);
+                    productos.Add(oProd);
                 }
                 reader.Close();
                 Conexion.Close();
             }
-            return personas;
+            return productos;
         }
+        //Traer Producto por ID
+        public ProductoDB ObtenerProductoPorId(int productoID)
+        {
+            ProductoDB producto = null;
+            using (Conexion)
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = "ObtenerProductoPorID";  // Nombre de tu procedimiento almacenado
+                comando.Connection = Conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+
+                // Añade el parámetro para el ID del producto
+                comando.Parameters.AddWithValue("@ProductoID", productoID);
+
+                Conexion.Open();
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    producto = new ProductoDB
+                    {
+                        id = reader.GetInt32(0),
+                        nombre = reader.GetString(1),
+                        cant = reader.GetInt32(2),
+                        precio = Convert.ToSingle(reader[3]),
+                        idprov = reader.GetInt32(4),
+                        nombreprov = reader.GetString(5)
+                    };
+                }
+                reader.Close();
+            }
+
+            return producto;
+        }
+
         //Traer Proveedores para el combo box 
         public DataTable ListaProveedorComboSP()
         {

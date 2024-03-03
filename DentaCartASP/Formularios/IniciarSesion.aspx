@@ -55,7 +55,9 @@
                             <div class="divider d-flex align-items-center my-4">
                                 <p class="text-center fw-bold mx-3 mb-0">O</p>
                             </div>
-
+                            <div id="alertaLogin">
+                                <asp:Literal ID="ltlAlertaLogin" runat="server"></asp:Literal>
+                            </div>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 <asp:TextBox ID="txtEmailUsu" runat="server" CssClass="form-control form-control-lg"></asp:TextBox>

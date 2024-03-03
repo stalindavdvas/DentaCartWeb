@@ -66,6 +66,40 @@ namespace ServicioDentaCart.Entidades
             }
             return personas;
         }
+        //Traer Proveedor por id
+        public ProveedorDB ObtenerProveedorPorId(int proveedorID)
+        {
+            ProveedorDB proveedor = null;
+            using (Conexion)
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = "ObtenerProveedorPorID";  // Nombre de tu procedimiento almacenado
+                comando.Connection = Conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+
+                // Añade el parámetro para el ID del proveedor
+                comando.Parameters.AddWithValue("@ProveedorID", proveedorID);
+
+                Conexion.Open();
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    proveedor = new ProveedorDB
+                    {
+                        id = reader.GetInt32(0),
+                        nombre = reader.GetString(1),
+                        dni = reader.GetString(2),
+                        dir = reader.GetString(3),
+                        correo = reader.GetString(4),
+                        telefono = reader.GetString(5)
+                    };
+                }
+                reader.Close();
+                Conexion.Close();
+            }
+            return proveedor;
+        }
+
         //Metodo para insertar Clientes
         public void guardarProveedor(string nombreproveedor, string dniproveedor, string dirproveedor, string emailproveedor, string telfproveedor)
         {

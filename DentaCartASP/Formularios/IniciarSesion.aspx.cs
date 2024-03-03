@@ -34,12 +34,18 @@ namespace DentaCartASP.Formularios
 
             ServicioDentaCart.EmpleadoDB usuario = clienteSoap.LoginUsuario(txtEmailUsu.Text, txtPassUsu.Text);
 
-            if (usuario != null) {
+            if (usuario != null)
+            {
                 Session["TipoUsuario"] = usuario.tipo;
                 Session["EmailUsuario"] = usuario.correo;
-                if (usuario.tipo == "AD" || usuario.tipo == "US") {
+                if (usuario.tipo == "AD" || usuario.tipo == "US")
+                {
                     Response.Redirect("Cliente.aspx");
                 }
+            }
+            else {
+                // Inicio de sesión no exitoso, mostrar alerta
+                ltlAlertaLogin.Text = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>Inicio de sesión fallido. Verifica tus credenciales.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
             }
             
         }
